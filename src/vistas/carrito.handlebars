@@ -1,0 +1,27 @@
+{{#if carrito}}
+    <h1 class="tituloPrincipal">Carrito</h1>
+    {{#if carrito.products}}
+    <div id="cuerpo">
+    {{#each carrito.products}}
+        <div class="productos" id="{{this.product._id}}">
+            <h3>{{this.quantity}} x {{this.product.title}}</h3>
+            <div class="descripcionProducto">
+                <p>{{this.product.description}}</p>
+                <p>Número de unidades: <span class="negrita">{{this.quantity}}</span>. Precio unitario: <span class="negrita">${{this.product.price}}</span></p>
+                <p>Código: <span class="negrita">{{this.product.code}}</span></p>
+                <p class="precioCarrito">subtotal: ${{multiplicar this.quantity this.product.price}}</p>
+            </div>
+        </div>
+    {{/each}}
+    </div>
+        <div class="botonesPaginas" id="botones">
+            <button id="vaciarCarrito">Vaciar Carrito</button>
+            <button id="eliminarCarrito" class="botonRojo">Eliminar Carrito</button>
+        </div>
+    {{else}}
+        <h1 class="vacio">El Carrito está vacío</h1>
+    {{/if}}
+{{else}}
+    <h1 class="tituloPrincipal">Error {{error.numero}}</h1>
+    <h1 class="vacio">{{error.descripcion}}</h1>
+{{/if}}

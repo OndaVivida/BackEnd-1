@@ -1,0 +1,13 @@
+.marcaDePagina {
+    display: flex;
+	color: #F7B05B;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    margin: 0;
+    font-weight: bold;
+}
+
+.carloh{
+	color: #CD4631;
+}

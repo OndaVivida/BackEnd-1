@@ -1,0 +1,25 @@
+.barraNavegacion {
+    right: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    top: 0;
+    background: #F7B05B;
+}
+
+.barraNavegacion nav a {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid #F7B05B;
+    color: #19381F;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.barraNavegacion nav a:hover {
+    color: #F7B05B;
+    background-color: #19381F;
+    text-decoration: underline;
+}

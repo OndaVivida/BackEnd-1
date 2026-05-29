@@ -1,0 +1,17 @@
+{{#if producto}}
+<h1 class="tituloPrincipal">{{producto.title}}</h1>
+<div class="productos">
+    <h3>{{producto.title}}</h3>
+    <p>{{producto.description}}</p>
+    <img src="{{producto.thumbnails}}" alt="Imagen del producto {{producto._id}}">
+    <p>Tipo: <span class="negrita">{{producto.category}}</span>. Quedan <span class="negrita">{{producto.stock}}</span>. <span class="precio">${{producto.price}}</span></p>
+    <p>Código: {{producto.code}}</p>
+    <div>
+    <button id="addAlCarrito" data-producto="{{producto._id}}">Añadir al Carrito</button>
+    <a class="boton" href="/products">Volver</a>
+    </div>
+</div>
+{{else}}
+    <h1 class="tituloPrincipal">Error {{error.numero}}</h1>
+    <h1 class="vacio">{{error.descripcion}}</h1>
+{{/if}}

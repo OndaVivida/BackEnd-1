@@ -1,0 +1,25 @@
+<div class="barraNavegacion">
+    <nav id="barraNavegacion">
+        {{#if (eq title "Inicio")}}
+            <a href="/products">Productos</a>
+            <a href="/gestor">Gestor Productos</a>
+        {{else if (eq title "Menu Gestor")}}
+            <a href="/">Inicio</a>
+            <a href="/products">Productos</a>
+        {{else if (eq title "Tienda")}}
+            <a href="/">Inicio</a>
+            <a href="" id="navBarCarrito">Carrito</a>
+        {{else if (eq title "Carrito")}}
+            <a href="/products">Productos</a>
+            <a href="/">Inicio</a>
+        {{else if (eq title "Producto")}}
+            <a href="/products">Productos</a>
+            <a href="" id="navBarCarrito">Carrito</a>
+        {{else if (eq title "Error")}}
+            <a href="/">Volver a Inicio</a>
+        {{else}}
+            <a href="/gestor">Gestor Productos</a>
+            <a href="/">Inicio</a>
+        {{/if}}
+    </nav>
+</div>

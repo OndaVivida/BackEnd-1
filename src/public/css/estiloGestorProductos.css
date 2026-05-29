@@ -1,0 +1,18 @@
+form input {
+  width: 80%;
+}
+
+.renglonUno {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.otrosRenglones {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+form h3:not(.renglonUno) {
+    margin-top: 18px;
+    margin-bottom: 5px;
+}

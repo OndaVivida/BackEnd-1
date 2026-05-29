@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="/icon/LC 128.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{#each script}}
+    <script defer src={{this}}></script>
+    {{/each}}
+    <link rel="stylesheet" href="/css/estiloGeneral.css">
+    <link rel="stylesheet" href="/css/estiloBarraNavegacion.css">
+    <link rel="stylesheet" href="/css/estiloPieDePagina.css">
+    {{#each estilo}}
+    <link rel="stylesheet" href="{{this}}">
+    {{/each}}
+    <title>{{title}}</title>
+</head>
+<body>
+    {{>encabezado}}
+    {{{body}}}
+    {{>pieDePagina}}
+</body>
+</html>

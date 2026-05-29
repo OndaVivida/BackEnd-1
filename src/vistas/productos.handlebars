@@ -1,0 +1,24 @@
+<h1 class="tituloPrincipal">Tienda</h1>
+
+<div id="contenedorProductos">
+{{#each productos.docs}}
+    <div class="productos">
+        <h3>{{this.title}}</h3>
+        <img src="{{this.thumbnails}}" alt="Imagen del producto {{this._id}}">
+        <p>{{this.description}}</p>
+        <p><span class="precio">${{this.price}}</span></p>
+        <a class="boton" href="/product/{{this._id}}">Ver Producto</a>
+    </div>
+{{else}}
+    <h1 class="vacio">No hay productos para mostrar</h1>
+{{/each}}
+</div>
+<div class="botonesPaginas">
+    {{#if productos.hasPrevPage}}
+        <a class="boton" href="/products?page={{productos.prevPage}}">{{productos.prevPage}}</a>
+    {{/if}}
+    <p> - Página {{productos.page}} - </p>
+    {{#if productos.hasNextPage}}
+        <a class="boton" href="/products?page={{productos.nextPage}}">{{productos.nextPage}}</a>
+    {{/if}}
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "unica-entrega",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "node --watch ./src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^9.0.1",
+    "mongoose": "^9.5.0",
+    "mongoose-paginate-v2": "^1.9.4",
+    "multer": "^2.1.1",
+    "socket.io": "^4.8.3"
+  }
+}

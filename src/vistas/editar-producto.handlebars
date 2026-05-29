@@ -1,0 +1,31 @@
+<h1 class="tituloPrincipal">Editar Producto</h1>
+<form id="formularioObtenerProd" class="cuerpo">
+    <h3 class="renglonUno">ID</h3>
+    <input class="propiedad" type="text" name="_id" required>
+    <p id="pieBoton">
+        <button type="submit">Obtener Informacion de Producto</button>
+    </p>
+</form>
+<form id="formularioEditarProd" class="cuerpo" enctype="multipart/form-data">
+    <h3 class="renglonUno">Título</h3>
+    <input class="propiedad" type="text" name="title" required>
+    <h3>Descripcion</h3>
+    <input class="propiedad" type="text" name="description">
+    <h3>Precio</h3>
+    <label>$
+        <input class="propiedad" type="number" name="price">
+    </label>
+    <h3>Categoría</h3>
+    <input class="propiedad" type="text" name="category">
+    <h3>Stock</h3>
+    <input class="propiedad" type="text" name="stock">
+    <h3>Disponible</h3>
+    <input class="propiedad" type="checkbox" name="status">
+    <h3>Código</h3>
+    <input class="propiedad" type="text" name="code" required>
+    <h3>Imagen</h3>
+    <input class="propiedad" type="file" name="thumbnails">
+    <p id="pieBoton">
+        <button type="submit">Modificar Producto</button>
+    </p>
+</form>

@@ -7,7 +7,7 @@ clientSocket.on("actualizacionDeApiProducts", async () => {
 async function actualizador () {
     const params = new URLSearchParams(window.location.search)
     const pagina = params.get("page") || 1
-    const respuesta = await fetch(`/api/products/?page=${pagina}`)
+    const respuesta = await fetch(`/api/products/?status=true&page=${pagina}`)
     const productos = (await respuesta.json()).docs
     const listaProductos =  document.getElementById("contenedorProductos")
     if (productos.length) {
@@ -26,5 +26,3 @@ async function actualizador () {
         })
     }
 }
-
-actualizador()
